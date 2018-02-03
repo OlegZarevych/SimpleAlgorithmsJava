@@ -4,6 +4,7 @@ import java.util.Arrays;
 public final class Sorting {
 
 	public static void selectingSort(int[] unSortedArray)
+
 	{
 		final int n = unSortedArray.length;
 		
@@ -32,6 +33,38 @@ public final class Sorting {
 				//swap
 				unSortedArray[i] = min;
 				unSortedArray[k] = temp;
+			}
+		}
+		
+		Timestamp timeStampEnd = new Timestamp(System.currentTimeMillis());
+		String time = String.valueOf(timeStampEnd.getTime() - timeStampStart.getTime());
+		System.out.println("Sorted array");
+		System.out.println(Arrays.toString(unSortedArray));
+		System.out.println("");
+		System.out.println(timeStampStart);
+		System.out.println(timeStampEnd);
+		System.out.println("Time spent:" + time);
+	}
+
+	public static void bubbleSort(int[] unSortedArray)
+	{
+		final int n = unSortedArray.length;
+		
+		System.out.println("Bubble Sort");
+		Timestamp timeStampStart = new Timestamp(System.currentTimeMillis());
+		
+		//TODO
+		for(int i = 0; i < n; i++)
+		{
+			for(int j = 0; j < n - 1; j++)
+			{
+				if(unSortedArray[j + 1] < unSortedArray[j])
+				{
+					//swap
+					int temp = unSortedArray[j + 1];
+					unSortedArray[j + 1] = unSortedArray[j];
+					unSortedArray[j] = temp;
+				}
 			}
 		}
 		

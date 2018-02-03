@@ -17,6 +17,7 @@ public class Main {
 		System.out.println(Arrays.toString(arr));
 		
 		Sorting.selectingSort(arr);
+		Sorting.bubbleSort(arr);
 	}
 	
 	private static int[] getRandomArray(int n)
