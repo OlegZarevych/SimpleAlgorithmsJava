@@ -4,20 +4,17 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) 
+	{
 		System.out.println("Enter array lenght");
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
-		
-		//get random array
-		int[] arr = getRandomArray(n);
-		
+				
 		System.out.println("Generated array:");
-		System.out.println(Arrays.toString(arr));
 		
-		Sorting.selectingSort(arr);
-		Sorting.bubbleSort(arr);
+		Sorting.selectingSort(getRandomArray(n));
+		Sorting.bubbleSort(getRandomArray(n));
+		Sorting.mergeSort(getRandomArray(n));
 	}
 	
 	private static int[] getRandomArray(int n)
@@ -32,5 +29,4 @@ public class Main {
 		
 		return arr;
 	}
-
 }
