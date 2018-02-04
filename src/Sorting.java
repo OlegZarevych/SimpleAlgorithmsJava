@@ -102,6 +102,16 @@ public final class Sorting {
 		System.out.println("Time spent:" + time);
 	}
 
+	public static void insertSort(int[] unSortedArray)
+	{
+		//TODO
+	}
+	
+	public static void quickSort(int[] unSortedArray)
+	{
+		//TODO
+	}
+	
 	private static int[] mergeSplit(int[] unSortedArray) 
 	{
 		final int n = unSortedArray.length;
