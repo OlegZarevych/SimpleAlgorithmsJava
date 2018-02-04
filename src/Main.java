@@ -24,7 +24,7 @@ public class Main {
 		
 		for(int i=0; i < n ; i++)
 		{
-			arr[i] = rand.nextInt(100);
+			arr[i] = rand.nextInt();
 		}
 		
 		return arr;
