@@ -15,6 +15,11 @@ public class Main {
 		Sorting.selectingSort(getRandomArray(n));
 		Sorting.bubbleSort(getRandomArray(n));
 		Sorting.mergeSort(getRandomArray(n));
+		
+		int[] arr = getRandomArray(n);
+		int search = arr[5];
+		Sorting.mergeSort(arr);
+		Search.binarySearch(arr, search);
 	}
 	
 	private static int[] getRandomArray(int n)
