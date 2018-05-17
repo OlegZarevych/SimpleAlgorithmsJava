@@ -87,7 +87,7 @@ public final class Sorting {
 		
 		System.out.println("Merge Sort");
 		System.out.println("Input array");
-		System.out.println(Arrays.toString(unSortedArray));
+		//System.out.println(Arrays.toString(unSortedArray));
 		Timestamp timeStampStart = new Timestamp(System.currentTimeMillis());
 		
 		int[] result = mergeSplit(unSortedArray);
@@ -95,7 +95,7 @@ public final class Sorting {
 		Timestamp timeStampEnd = new Timestamp(System.currentTimeMillis());
 		String time = String.valueOf(timeStampEnd.getTime() - timeStampStart.getTime());
 		System.out.println("Sorted array");
-		System.out.println(Arrays.toString(result));
+		//System.out.println(Arrays.toString(result));
 		System.out.println("");
 		System.out.println(timeStampStart);
 		System.out.println(timeStampEnd);
@@ -104,7 +104,36 @@ public final class Sorting {
 
 	public static void insertSort(int[] unSortedArray)
 	{
-		//TODO
+		final int n = unSortedArray.length;
+		
+		System.out.println("Insert Sort");
+		System.out.println("Input array");
+		System.out.println(Arrays.toString(unSortedArray));
+		Timestamp timeStampStart = new Timestamp(System.currentTimeMillis());
+
+		int temp, j;
+		
+		for(int i = 1; i < n; i++)
+		{
+			j = i;
+			
+			while(j > 0 && unSortedArray[j] < unSortedArray[j-1])
+			{
+				temp = unSortedArray[j];
+				unSortedArray[j] = unSortedArray[j-1]; 
+				unSortedArray[j-1] = temp;
+				j--;
+			}
+		}
+		
+		Timestamp timeStampEnd = new Timestamp(System.currentTimeMillis());
+		String time = String.valueOf(timeStampEnd.getTime() - timeStampStart.getTime());
+		System.out.println("Sorted array");
+		System.out.println(Arrays.toString(unSortedArray));
+		System.out.println("");
+		System.out.println(timeStampStart);
+		System.out.println(timeStampEnd);
+		System.out.println("Time spent:" + time);
 	}
 	
 	public static void quickSort(int[] unSortedArray)
