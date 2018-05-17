@@ -15,6 +15,7 @@ public class Main {
 		Sorting.selectingSort(getRandomArray(n));
 		Sorting.bubbleSort(getRandomArray(n));
 		Sorting.mergeSort(getRandomArray(n));
+		Sorting.insertSort(getRandomArray(n));
 		
 		int[] arr = getRandomArray(n);
 		int search = arr[5];
@@ -29,7 +30,7 @@ public class Main {
 		
 		for(int i=0; i < n ; i++)
 		{
-			arr[i] = rand.nextInt();
+			arr[i] = rand.nextInt(120);
 		}
 		
 		return arr;
